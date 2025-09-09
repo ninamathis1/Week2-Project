@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Health Facts</title>
+    <style>
+        /* Resetting some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #6595e88d;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2c210a;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .food-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .food-item {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .food-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .nutrition-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            text-align: center;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .food-item:hover .nutrition-info {
+            opacity: 1;
+        }
+
+        .food-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-item h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .nutrition-info p {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Are these "Healthy" Foods good for you?</h1>
+
+    <div class="food-container">
+        <!-- Olipop Soda -->
+        <div class="food-item">
+            <img src=olipop.jpg alt="Bubbly Soda">
+            <div class="nutrition-info">
+                <h2>Olipop Soda</h2>
+                <p>Calories: 150</p>
+                <p>Sugar: 5g</p>
+                <p>Sodium: 30mg</p>
+                <p>Caffeine: 30mg</p>
+            </div>
+        </div>
+
+        <!-- Clif Bar -->
+        <div class="food-item">
+            <img src=Clifbar.jpg alt="Clif Bar">
+            <div class="nutrition-info">
+                <h2>Clif Bar</h2>
+                <p>Calories: 250</p>
+                <p>Protein: 9g</p>
+                <p>Sugars: 21g</p>
+                <p>Fat: 9g</p>
+            </div>
+        </div>
+
+        <!-- Premier Protein Shake -->
+        <div class="food-item">
+            <img src="premier protein.jpg" alt="Premier Protein Shake">
+            <div class="nutrition-info">
+                <h2>Premier Protein Shake</h2>
+                <p>Calories: 160</p>
+                <p>Protein: 30g</p>
+                <p>Sugars: 1g</p>
+                <p>Fat: 3g</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Fruits & Veggies</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #d42d7e6b;
+      overflow: hidden;
+      font-family: monospace;
+      color: #fff;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2.5rem;
+      animation: float 12s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      to {
+        transform: translateY(-120vh) rotate(360deg);
+      }
+    }
+
+  
+  </style>
+</head>
+<body>
+  <!-- Floating emojis -->
+  <div class="emoji" style="left:10%; animation-duration: 9s;">🍓</div>
+  <div class="emoji" style="left:30%; animation-duration: 14s;">🍎</div>
+  <div class="emoji" style="left:50%; animation-duration: 11s;">🥦</div>
+  <div class="emoji" style="left:70%; animation-duration: 13s;">🍇</div>
+  <div class="emoji" style="left:85%; animation-duration: 10s;">🥕</div>
+  <div class="emoji" style="left:20%; animation-duration: 15s;">🍌</div>
+  <div class="emoji" style="left:60%; animation-duration: 12s;">🍒</div>
+
+  <!-- Code block -->
+  <div class="code-box">
+
+
+
